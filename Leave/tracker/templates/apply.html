@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h4 class="apply">apply Now</h4>
+<form class="appy_form" action="" method="POST">
+{% csrf_token %}
+<div class="form_field">
+    <label>Star Date</label><br><br>
+    <input name="start" type="date"><br><br>
+    <label>End Date</label><br><br>
+    <input name="end" type="date"><br><br>
+    <select name="type" id="">
+        <option name="" value="">Select Leave Type</option>
+        <option name="type" value="Emergency">Emergency</option>
+        <option name="type" value="Health">Health</option>
+        <option name="type" value="Personal">Personal</option>
+        <option name="type" value="self quarantine">Self quarantine</option>
+        <option name="type" value="Study">Study</option>
+        <option name="type" value="Vacation">Vacation</option>
+        <section><option value=""></option></section>
+      </select><br><br>
+    <label>Reason</label><br><br>
+    <textarea name="reason"></textarea><br>
+    <button class="btn_apply">Apply Now</button>
+</div>
+</form>
+
+
+{% endblock  %}

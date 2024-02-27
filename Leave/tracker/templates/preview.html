@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="profile_display">
+    <h5>Start</h5>
+   <div><p>{{x.start}}</p></div> 
+   <h5>End</h5>
+<div><p>{{x.end}}</p></div>
+<h5>Type</h5>
+<div><p>{{x.type}}</p></div>
+<h5>Status</h5>
+{% if x.action %}
+<div><p>approved</p></div>
+{% else %}
+<div><p>pending</p></div>
+{% endif %}
+<h5>Reason</h5>
+<div><p>{{x.reason}}</p></div>
+<button class="btn_profile"><a class="delete" href="/delete/{{x.id}}">Delete</a></button>
+</div>
+{% endblock  %}

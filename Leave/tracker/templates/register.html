@@ -1,0 +1,33 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'login.css' %}">
+<form action="" method="POST">
+    {% csrf_token %}
+<div class="form_container">
+    <P>only staff are required to use this page</P>
+    <div class="left">
+        <h4>Sign_up</h4>
+        <form class="form" action="" method="POST">
+            {% csrf_token %}
+            <div class="input-block">
+                <input class="input" type="text" id="username" required="" name="username">
+                <label for="email">Username</label>
+            </div><br>
+            <div class="input-block">
+                <input class="input" type="email" id="email" required="" name="email">
+                <label for="email">Email</label>
+            </div><br>
+            <div class="input-block">
+                <input class="input" type="password" id="pass" required="" name="password">
+                <label for="email">Password</label>
+            </div><br>
+            <div class="input-block">
+                <input class="input" type="password" id="pass" required="" name="password1">
+                <label for="pass">Confirm_Password</label>
+            </div><br>
+            <div class="input-block">
+            <button><input type="submit" value="Register"></button>
+        </div>
+        </form>
+    </div> 
+</div>
+</form>

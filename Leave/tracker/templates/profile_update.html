@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form class="p_up" action="" method="POST">
+    {% csrf_token %}
+    <input type="text" name="firstname" id="" placeholder="first_name"><br>
+    <input type="text" name="secondname" id="" placeholder="second_name"><br>
+    <input type="text" name="age" id="" placeholder="age"><br>
+    <input type="text" name="address" id="" placeholder="address"><br>
+    <input type="text" name="mobile" id="" placeholder="mobile_number"><br>
+    <button class="submit_up" type="submit">Submit</button>
+</form>
+{% endblock  %}

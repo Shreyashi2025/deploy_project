@@ -1,0 +1,224 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    color: white;
+    position: absolute;
+    background-color: black;
+    padding-top: 1rem;
+    top: 0;
+}
+.logo{
+    color: white;
+    font-size: 25px;
+    
+}
+.sidenav{
+    margin-top: 6rem;
+}
+.sidenav a{
+    display: block;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+}
+.active{
+    background-color: #425981;
+    width: 55%;
+    border-radius: 10px;
+    padding: 10px;
+    padding-right: 1rem;
+}
+.top{
+    padding: 1.3rem 10%;
+    padding-left: 20rem;
+}
+.header{
+display: flex;
+justify-content: space-between;
+padding-left: 10px;
+}
+.header a{
+    color: black;
+    font-weight: 700;
+}
+hr{
+    height: 1px;
+    width: 114%;
+    margin-top: 1rem;
+    background-color:  gray;
+    
+}
+.side_hr{
+    height: 1px;
+    width: 100%;
+    margin-top: 1.3rem;
+    background-color:  gray;
+}
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.profile img{
+    width: 1.5rem;
+}
+.profile_display{
+   margin-top: 4rem;
+   margin-left: 7rem;
+    
+}
+.profile_display h5{
+margin-bottom: 8px;    
+}
+.profile_display div{
+background-color: rgb(243, 242, 242);
+width: 90%;
+height: 5vh;
+margin-bottom: 1rem;
+border-radius: 5px;
+
+}
+.btn_profile{
+    background: linear-gradient(dodgerblue,blue);
+    width: 30%;
+    margin-left: 2rem;
+    height: 3rem;
+    border-radius: 10px;
+}
+.btn_profile a{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.btn_profile .delete{
+    color: red;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.main-contnet{
+    margin-top: 1.8rem;
+    padding-left: 10px;
+}
+/* form{
+    margin-top: 10rem;
+} */
+.apply{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    
+}
+.form_field{
+    width: 900px;
+    margin-left: 3rem;
+    height: 50vh;
+    
+}
+.form_field input{
+  width: 100%;
+  margin-bottom: 2px; 
+  height: 5vh;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px gray;
+}
+.form_field textarea{
+  width: 100%;
+  margin-bottom: 1rem; 
+  height: 13vh;
+  border-radius: 1rem;
+  box-shadow: 0 0 1px 1px gray;
+}
+.form_field label{
+    margin-bottom: 3rem;
+}
+.btn_apply{
+    width: 100%;
+    background-color: #425981;
+    height: 4vh;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 2px gray;
+}
+.p_up{
+    margin-left: 3rem;
+}
+.p_up input{
+   margin-bottom: 1rem;
+   width: 100%;
+   height: 5vh;
+   border-bottom-left-radius: 5px;
+   color: black;
+   border-bottom: 3px solid gray;
+}
+.submit_up{
+    border: none;
+    width: 100%;
+    height: 5vh;
+    border-radius: 5px;
+    background-color: #425981;
+}
+
+
+
+
+.messages{
+    text-align: center;
+    margin-left: 23rem;
+    position: absolute;
+    font-weight: 800;
+    color: rgb(139, 202, 45);
+}
+.total{
+    background: linear-gradient(dodgerblue,blue);
+    width: 20rem;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px 5px gray;
+}
+.total p{
+    text-align: center;
+    font-size: 1.8rem;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.home .content{
+    background: linear-gradient(#425981,blue);
+    width: 80%;
+    height: 70vh;
+    text-align: center;
+}
+
+.home .main_content {
+    margin-top: 10rem;
+}
+.home .main_content h3{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.home .main_content p{
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+.home .main_content a{
+    color: red;
+}

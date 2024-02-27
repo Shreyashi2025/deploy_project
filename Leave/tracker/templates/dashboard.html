@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'table.css' %}">
+{% if leave_list %}
+
+
+
+
+<table id="customers">
+    {% for x in leave_list reversed %}
+    <tr>
+        <th>Type</th>
+        <th>Status</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>{{x.type}}</td>
+        {% if x.action %}
+        <td><p class="approved">approved</p></td>
+        {% else %}
+        <td><p class="pending">pending</p></td>
+        {% endif %}
+        <td><a class="prev" href="/preview/{{x.id}}">View details</a></td>
+        <td><a class="delete" href="/delete/{{x.id}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+<p>Your leave is empty <a href="/apply">click </a>to apply</p>
+{% endif %}
+
+
+
+{% endblock  %}

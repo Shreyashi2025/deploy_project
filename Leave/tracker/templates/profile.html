@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if profile_info %}
+{% for x in prof_info %}
+<div class="profile_display">
+    <h5>First_name</h5>
+   <div><p>{{x.firstname}}</p></div> 
+   <h5>Second_name</h5>
+<div><p>{{x.secondname}}</p></div>
+<h5>Age</h5>
+<div><p>{{x.age}}</p></div>
+<h5>E-mail</h5>
+<div>{{user.email}}</div>
+<div><p>{{x.address}}</p></div>
+<h5>Mobile</h5>
+<div><p>{{x.mobile}}</p></div>
+<button class="btn_profile"><a href="/profile_edit/{{x.id}}">edit profile</a></button>
+{% endfor %}
+</div>
+{% else %}
+<button class="btn_profile"> <a  href="/profile_update">Update your profile</a></button>
+{% endif %}
+{% endblock  %}

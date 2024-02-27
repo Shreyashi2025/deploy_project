@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <header>
+
+        </header>
+    <div class="sidebar">
+     <a href="/" class="logo">Leave Tracker</a>
+     <hr class="side_hr">
+        <div class="sidenav">
+     <a href="/dashboard" class="active">Dashboard</a>
+     <a href="/apply">Apply for Leave</a>
+     <a href="/total">Total Leave</a>
+        </div>
+    </div>
+    <div class="top">
+        {% for message in messages %}
+        <p class="messages">{{message}}</p>
+        {% endfor %}
+            <div class="header">
+                {% if user.is_authenticated %}
+        <a href="/">{{user.username}}</a>
+        {% else %}
+        <a href="/login">login</a>
+        {% endif %}
+        <div class="profile">
+            <p><a href="/profile">Your profile</a></p>
+            <p><a href="/logout">Logout</a></p>
+        </div>
+            </div>
+            <hr>
+            <div class="main-contnet">
+                {% block content %}
+        
+        {% endblock  %}
+            </div>
+
+    </div>
+
+        
+    </body>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form class="p_up"  action="" method="POST">
+    {% csrf_token %}
+    <input type="text" name="firstname" id="" value="{{x.firstname}}">
+    <input type="text" name="secondname" id="" value="{{x.secondname}}">
+    <input type="text" name="age" id="" value="{{x.age}}">
+    <input type="text" name="address" id="" value="{{x.address}}">
+    <input type="text" name="mobile" id="" value="{{x.mobile}}">
+    <button class="submit_up" type="submit">Submit</button>
+</form>
+{% endblock  %}
